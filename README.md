@@ -8,7 +8,7 @@ A Python-based scraper to fetch product listings and details from [Noon.com](htt
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/noon-scraper.git
+   git clone https://github.com/BairagiP/noon-scraper.git
    cd noon_scraper
    ```
 
@@ -38,11 +38,39 @@ uvicorn app:app --reload
 Open your browser at:  
 👉 [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
+Example API Call
 
-
+```bash
+POST http://127.0.0.1:8000/scrape?query=mobiles&pages=3
+```
+Example Response
+```bash 
+{
+  "extracted_data": [
+    {
+      "title": "Apple MacBook Air M1",
+      "price": "AED 3,999",
+      "rating": "4.8",
+      "reviews": "125",
+      "category": "Electronics & Mobiles > Laptops"
+    }
+  ]
+}
+```
 ## 🛠 Requirements
 - Python 3.8+  
 - FastAPI  
 - Uvicorn  
 - Requests  
 - BeautifulSoup4  
+
+## 📌 Notes
+
+CLI mode saves data to extracted.json.
+
+API mode returns structured JSON responses.
+
+
+## Running Published Code
+
+ will be added in future
